@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="timer"></div>
+    <div id="container">
+      <h1>Interesting Quiz</h1>
+      <div id="instruction">
+        <ul>
+          <li>There are total 6 six question.</li>
+          <li>Each question have one marks.</li>
+          <li>You have 10s for one question.</li>
+          <li>You can change the answer any no. of time within quiz duration.</li>
+          <li>Total time is 60s for answering all questions.</li>
+          <li>After quiz completion, You will find score statistics.</li>
+        </ul>
+      </div>
+      <button id="startBtn" onclick="startTimer()">Start</button>
+      <div id="optionContainer">
+        <div id="questionContainer"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+      </div>
+      <div id="btnContainer">
+        <button class="btn" onclick="showQuestionOption('prev')">Prev</button>
+        <button class="btn" id="submit" onclick="handleSubmit()">Submit</button>
+        <button class="btn" onclick="showQuestionOption('next')">Next</button>
+      </div>
+      <button id="restartBtn" onclick="handleRestart()">Restart</button>
+      </div>
+    <div id="resultContainer">
+     <h3>Result</h3>  
+     <p id="score"></p>
+     <p id="correct"></p>
+     <p id="incorrect"></p>
+     <p id="spentTime"></p>
+     <p id="couragiousMsg">You performed very well. And relax next time, You can do it better.</p>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
